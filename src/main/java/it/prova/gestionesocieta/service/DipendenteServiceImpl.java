@@ -1,5 +1,6 @@
 package it.prova.gestionesocieta.service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import javax.persistence.EntityManager;
@@ -61,5 +62,10 @@ public class DipendenteServiceImpl implements DipendenteService {
 			query += " and d.redditoannuolordo = "+ example.getRedditoAnnuoLordo();
 		
 		return entityManager.createQuery(query, Dipendente.class).getResultList();
+	}
+
+	@Override
+	public Dipendente trovaIlPiuAnziano(LocalDate data) {
+		return dipendenteRepository.findFirst1BySocieta_DataFondazioneBeforeOrderByDataAssunzioneAsc(data);
 	}
 }

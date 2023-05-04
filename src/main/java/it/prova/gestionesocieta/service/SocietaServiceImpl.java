@@ -94,4 +94,9 @@ public class SocietaServiceImpl implements SocietaService {
 		return societaRepository.findByIdEager(id);
 	}
 
+	@Override
+	public List<Societa> listaSocietaDistinteConDipendenteRedditoMaggiore(int redditoMinimo) {
+		return societaRepository.findAllDistinctByDipendenti_RedditoAnnuoLordoGreaterThan(redditoMinimo);
+	}
+
 }

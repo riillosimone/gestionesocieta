@@ -19,4 +19,6 @@ public interface SocietaService {
 	public void delete (Long id);
 
 	public List<Societa> findByExample(Societa example);
+	
+	public List<Societa> listaSocietaDistinteConDipendenteRedditoMaggiore (int redditoMinimo);
 }
