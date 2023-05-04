@@ -14,6 +14,9 @@ public interface SocietaService {
 	
 	public void inserisciNuovo (Societa societaInstance);
 	
-	public void delete (Societa societaInstance);
+	public Societa caricaSingolaSocietaEager(Long id);
+	
+	public void delete (Long id);
 
+	public List<Societa> findByExample(Societa example);
 }

@@ -1,7 +1,6 @@
 package it.prova.gestionesocieta.model;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -33,6 +32,11 @@ public class Societa {
 
 	public Societa() {
 		super();
+	}
+
+	public Societa(String ragioneSociale) {
+		super();
+		this.ragioneSociale = ragioneSociale;
 	}
 
 	public Societa(String ragioneSociale, String indirizzo, LocalDate dataFondazione) {
